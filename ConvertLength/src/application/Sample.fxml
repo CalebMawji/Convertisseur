@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
+   <children>
+      <TabPane fx:id="MonPane" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+            <Tab fx:id="tabAccueil" text="Accueil">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="203.0" layoutY="14.0" prefHeight="72.0" prefWidth="196.0" text="Bienvenue!" textAlignment="CENTER" textFill="#1100ff">
+                           <font>
+                              <Font name="Times New Roman Bold" size="41.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="227.0" layoutY="107.0" text="Les Convertisseurs:">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="HomeMasse" layoutX="273.0" layoutY="170.0" mnemonicParsing="false" onAction="#changer" text="Masse" />
+                        <Button fx:id="HomeLongeur" layoutX="199.0" layoutY="170.0" mnemonicParsing="false" onAction="#changer" text="Longeur" />
+                        <Button fx:id="HomeTemps" layoutX="338.0" layoutY="170.0" mnemonicParsing="false" onAction="#changer" text="Temps" />
+                        <Button layoutX="272.0" layoutY="266.0" mnemonicParsing="false" onAction="#quitter" text="Quitter" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+          <Tab fx:id="tabLongeur" text="Longeur">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="txtLongeur1" layoutX="112.0" layoutY="116.0" onKeyReleased="#Convertir1" onKeyTyped="#verifNum" />
+                        <TextField fx:id="txtLongeur2" layoutX="329.0" layoutY="116.0" onKeyReleased="#Convertir2" onKeyTyped="#verifNum" />
+                        <ComboBox fx:id="cboLongeur1" layoutX="112.0" layoutY="143.0" onAction="#Convertir1" prefHeight="27.0" prefWidth="161.0" />
+                        <ComboBox fx:id="cboLongeur2" layoutX="329.0" layoutY="143.0" onAction="#Convertir1" prefHeight="27.0" prefWidth="162.0" />
+                        <Label layoutX="294.0" layoutY="130.0" text="=">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="153.0" layoutY="42.0" prefHeight="34.0" prefWidth="308.0" text="Convertisseur de Longeur" textAlignment="CENTER" textFill="#7458b5">
+                           <font>
+                              <Font size="28.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="272.0" layoutY="266.0" mnemonicParsing="false" onAction="#quitter" text="Quitter" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="tabMasse" text="Masse">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ComboBox fx:id="cboMasse1" layoutX="112.0" layoutY="143.0" onAction="#Convertir12" prefHeight="27.0" prefWidth="161.0" />
+                        <ComboBox fx:id="cboMasse2" layoutX="329.0" layoutY="143.0" onAction="#Convertir12" prefHeight="27.0" prefWidth="161.0" />
+                        <TextField fx:id="txtMasse2" layoutX="329.0" layoutY="116.0" onKeyReleased="#Convertir22" onKeyTyped="#verifNum" />
+                        <TextField fx:id="txtMasse1" layoutX="112.0" layoutY="116.0" onKeyReleased="#Convertir12" onKeyTyped="#verifNum" />
+                        <Label layoutX="294.0" layoutY="130.0" text="=">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="164.0" layoutY="42.0" text="Convetisseur de Masse" textFill="#7458b5">
+                           <font>
+                              <Font size="28.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="272.0" layoutY="266.0" mnemonicParsing="false" onAction="#quitter" text="Quitter" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="tabTemps" text="Temps">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="txtTemps1" layoutX="112.0" layoutY="116.0" onKeyReleased="#Convertir11" onKeyTyped="#verifNum" />
+                        <TextField fx:id="txtTemps2" layoutX="329.0" layoutY="116.0" onKeyReleased="#Convertir21" onKeyTyped="#verifNum" />
+                        <ComboBox fx:id="cboTemps2" layoutX="329.0" layoutY="143.0" onAction="#Convertir11" prefHeight="27.0" prefWidth="161.0" />
+                        <ComboBox fx:id="cboTemps1" layoutX="112.0" layoutY="143.0" onAction="#Convertir11" prefHeight="27.0" prefWidth="161.0" />
+                        <Label layoutX="294.0" layoutY="130.0" text="=">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="164.0" layoutY="41.0" text="Convertisseur de Temps" textFill="#7458b5">
+                           <font>
+                              <Font size="28.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="272.0" layoutY="266.0" mnemonicParsing="false" onAction="#quitter" text="Quitter" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
